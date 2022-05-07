@@ -1,0 +1,29 @@
+.img-ronald::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/img/lines.png') no-repeat;
+    object-fit: cover;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: 5px;
+  background: #c6f6d5; 
+}
+
+#contact {
+  margin: 0;
+}
+
+#music {
+  margin-right: 10px;
+}

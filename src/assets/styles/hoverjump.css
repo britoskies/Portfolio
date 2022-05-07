@@ -1,0 +1,6 @@
+.smoothjump {
+transition: 1s ease;
+}
+.smoothjump:hover {
+  transform: scale(1.2);
+}
