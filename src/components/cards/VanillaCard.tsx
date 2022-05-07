@@ -15,7 +15,7 @@ import {
   AccordionPanel,
   Button,
   Flex,
-  useMediaQuery
+  useMediaQuery,
 } from "@chakra-ui/react";
 
 // Service
@@ -23,7 +23,7 @@ import { iProjects } from "../../interfaces/projects";
 import projectsjson from "../../services/projects.js";
 
 const VanillaCard = () => {
-   const [isNotSmallScreen]: boolean[] = useMediaQuery("(min-width:600px)");
+  const [isNotSmallScreen]: boolean[] = useMediaQuery("(min-width:600px)");
   return (
     <Box w="100%" h="100%">
       <Wrap
@@ -69,16 +69,16 @@ const VanillaCard = () => {
                     className="image"
                   />
                   <Box className="middle">
-                    <Button
-                      colorScheme="teal"
-                      _hover={{
-                        bgGradient: "linear(to-l, #00a1ab, #91C483)",
-                      }}
-                    >
-                      <a href={p.link} target="_blank">
+                    <a href={p.link} target="_blank">
+                      <Button
+                        colorScheme="teal"
+                        _hover={{
+                          bgGradient: "linear(to-l, #00a1ab, #91C483)",
+                        }}
+                      >
                         Take a look
-                      </a>
-                    </Button>
+                      </Button>
+                    </a>
                   </Box>
                 </Box>
                 <Flex

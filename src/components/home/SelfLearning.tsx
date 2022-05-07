@@ -26,7 +26,7 @@ const SelfLearningItem = (): JSX.Element => {
         <b>Self Learning</b>
       </h3>
       <h4 className="vertical-timeline-element-subtitle">Online & College</h4>
-      <List spacing={3}>
+      <List spacing={3} mt={5}>
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.200" />
           JavaScript with NodeJS - Udemy

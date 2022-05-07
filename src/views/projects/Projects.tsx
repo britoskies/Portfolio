@@ -77,7 +77,7 @@ const Projects: React.FC = (): JSX.Element => {
         colorScheme="blue"
         variant="solid"
       >
-        <a href="https:/github.com/britoskies" target="_blank">
+        <a href="https://github.com/britoskies/" target="_blank">
           Check for more on GitHub
         </a>
       </Button>

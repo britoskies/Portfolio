@@ -15,7 +15,7 @@ import {
   AccordionPanel,
   Button,
   Flex,
-  useMediaQuery
+  useMediaQuery,
 } from "@chakra-ui/react";
 
 // Service
@@ -69,16 +69,16 @@ const ReactCard = () => {
                     className="image"
                   />
                   <Box className="middle">
-                    <Button
-                      colorScheme="teal"
-                      _hover={{
-                        bgGradient: "linear(to-l, #00a1ab, #91C483)",
-                      }}
-                    >
-                      <a href={p.link} target="_blank">
+                    <a href={p.link} target="_blank">
+                      <Button
+                        colorScheme="teal"
+                        _hover={{
+                          bgGradient: "linear(to-l, #00a1ab, #91C483)",
+                        }}
+                      >
                         Take a look
-                      </a>
-                    </Button>
+                      </Button>
+                    </a>
                   </Box>
                 </Box>
                 <Flex

@@ -51,7 +51,6 @@ function App() {
     React.useState<ReactSoundProps["playStatus"]>("STOPPED");
 
   function togglePlayStatus() {
-    console.log("sound");
     setStatus((status) => (status === "STOPPED" ? "PLAYING" : "STOPPED"));
   }
 
@@ -63,6 +62,8 @@ function App() {
           url={song}
           playStatus={status}
           volume={5}
+          loop={true}
+          //autoLoad={true}
         />
         <NavBar />
         <FormControl
@@ -78,17 +79,18 @@ function App() {
           <Switch
             id="email-alerts"
             colorScheme="red"
+            //isChecked
             onChange={() => togglePlayStatus()}
           />
         </FormControl>
         {loading ? (
           <CustomSpinner />
         ) : (
-          <SlideFade in={isOpen} offsetY="100px">
+          
             <Center>
               <Router />
             </Center>
-          </SlideFade>
+          
         )}
       </VStack>
     </ChakraProvider>

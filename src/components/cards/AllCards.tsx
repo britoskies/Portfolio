@@ -40,7 +40,7 @@ const AllCards = () => {
           return (
             <WrapItem
               bg="#262626"
-              maxW={["350px","400px","400px","400px"]}
+              maxW={["350px", "400px", "400px", "400px"]}
               p="6"
               d="flex"
               flexDirection="column"
@@ -65,24 +65,29 @@ const AllCards = () => {
               <Box className="container">
                 <Image
                   src={p.image}
-                  h={["150px","225px","225px","225px"]}
+                  h={["150px", "225px", "225px", "225px"]}
                   borderRadius="lg"
                   className="image"
                 />
                 <Box className="middle">
-                  <Button
-                    colorScheme="teal"
-                    _hover={{
-                      bgGradient: "linear(to-l, #00a1ab, #91C483)",
-                    }}
-                  >
-                    <a href={p.link} target="_blank">
+                  <a href={p.link} target="_blank">
+                    <Button
+                      colorScheme="teal"
+                      _hover={{
+                        bgGradient: "linear(to-l, #00a1ab, #91C483)",
+                      }}
+                    >
                       Take a look
-                    </a>
-                  </Button>
+                    </Button>
+                  </a>
                 </Box>
               </Box>
-              <Flex w="100%" direction={isNotSmallScreen ? "row" : "column"} gap={3} justifyContent="center">
+              <Flex
+                w="100%"
+                direction={isNotSmallScreen ? "row" : "column"}
+                gap={3}
+                justifyContent="center"
+              >
                 <Badge borderRadius="full" px="2" colorScheme="green">
                   {p.type}
                 </Badge>

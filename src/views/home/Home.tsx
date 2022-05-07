@@ -27,7 +27,13 @@ const Home: React.FC = (): JSX.Element => {
   const [isNotSmallScreen]: boolean[] = useMediaQuery("(min-width:400px)");
 
   return (
-    <Stack w="100%" h="100%" align="center" position="relative" zIndex={1}>
+    <Stack
+      w="100%"
+      h="100%"
+      align="center"
+      position="relative"
+      zIndex={1}
+    >
       <Main onOpen={onOpen} overlay={<OverlayOne />} setOverlay={setOverlay} />
       <ContactOverlay isOpen={isOpen} onClose={onClose} overlay={overlay} />
       <Stack

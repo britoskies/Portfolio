@@ -1,4 +1,3 @@
-
 // Chakra
 import {
   Button,
@@ -11,37 +10,39 @@ import {
   IconButton,
   Flex,
   Skeleton,
+  useMediaQuery,
 } from "@chakra-ui/react";
 
 // Components and icons
-import InfoPopover from './InfoPopover';
+import InfoPopover from "./InfoPopover";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import { GitHub } from "../../assets/icons/GitHub";
 import { Linkedin } from "../../assets/icons/Linkedin";
 
-
 type Props = {
-  isOpen: boolean,
-  onClose: any,
-  overlay: JSX.Element
-}
-
+  isOpen: boolean;
+  onClose: any;
+  overlay: JSX.Element;
+};
 
 const ContactOverlay = ({ isOpen, onClose, overlay }: Props): JSX.Element => {
+  const [isNotSmallScreen]: boolean[] = useMediaQuery("(min-width:600px)");
   return (
     <Modal isCentered isOpen={isOpen} onClose={onClose}>
       {overlay}
-      <ModalContent bg="#262626" color="white">
+      <ModalContent w={isNotSmallScreen ? "" : "70%"} bg="#262626" color="white">
         <ModalHeader color="white">Contact Me!</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <Flex gap={4} justify="center" align="center">
-            <Skeleton
-              w={20}
-              startColor="teal.500"
-              endColor="green.500"
-              height="10px"
-            />
+            {isNotSmallScreen && (
+              <Skeleton
+                w={20}
+                startColor="teal.500"
+                endColor="green.500"
+                height="10px"
+              />
+            )}
             <InfoPopover header="Email" body="britoskies@gmail.com">
               <IconButton
                 colorScheme="orange"
@@ -74,16 +75,20 @@ const ContactOverlay = ({ isOpen, onClose, overlay }: Props): JSX.Element => {
                 icon={<PhoneIcon />}
               />
             </InfoPopover>
-            <Skeleton
-              w={20}
-              startColor="teal.500"
-              endColor="green.500"
-              height="10px"
-            />
+            {isNotSmallScreen && (
+              <Skeleton
+                w={20}
+                startColor="teal.500"
+                endColor="green.500"
+                height="10px"
+              />
+            )}
           </Flex>
         </ModalBody>
         <ModalFooter>
-          <Button color="black" onClick={onClose}>Close</Button>
+          <Button color="black" onClick={onClose}>
+            Close
+          </Button>
         </ModalFooter>
       </ModalContent>
     </Modal>
