@@ -73,7 +73,7 @@ const NavBar: React.FC = (): JSX.Element => {
             Projects
           </Button>
           <Button textColor="white" colorScheme="teal" variant="solid" ml={3}>
-            <HashLink smooth to="#contact">
+            <HashLink smooth to="/#contact">
               Hire me
             </HashLink>
           </Button>

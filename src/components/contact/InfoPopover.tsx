@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Popover,
-  PopoverTrigger,
+  PopoverTrigger as OrigPopoverTrigger,
   PopoverContent,
   PopoverHeader,
   PopoverBody,
@@ -15,9 +15,12 @@ import { Link } from "@chakra-ui/react";
 
 type Props = {
   children: React.ReactNode;
-  header: string;
+  header: string; 
   body: string;
 };
+
+const PopoverTrigger: React.FC<{ children: React.ReactNode }> =
+  OrigPopoverTrigger;
 
 const InfoPopover = ({ children, header, body }: Props): JSX.Element => {
   const { hasCopied, onCopy } = useClipboard(body);
