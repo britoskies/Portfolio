@@ -16,7 +16,7 @@ const ExperienceItem = (): JSX.Element => {
         borderBottom: "solid 5px #f56565",
       }}
       contentArrowStyle={{ borderRight: "12px solid #2b2b2b" }}
-      date="Mar 2021 - Aug 2021"
+      date="Jun 2022 - Present"
       iconStyle={{ background: "#f56565", color: "#fff" }}
       icon={<PhoneIcon />}
     >
@@ -24,11 +24,12 @@ const ExperienceItem = (): JSX.Element => {
         <b>Work Experience</b>
       </h3>
       <br />
-      <h4 className="vertical-timeline-element-subtitle">Teleperformance</h4>
+
+      <h4 className="vertical-timeline-element-subtitle">Banco Popular Dominicano</h4>
       <p>
-        Worked as a Customer Service Representative in english format. My role
-        was to answer inbound phone calls, addressing customers questions about
-        products and services, and generate sales lead.
+        Currently I'm working as a RPA Developer in one of the most important
+        banks in my country. Using tools like BluePrism for automation purposes,
+        Jira for project management tooling and SCRUM as the methology
       </p>
     </VerticalTimelineElement>
   );

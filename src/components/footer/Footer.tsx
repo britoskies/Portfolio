@@ -31,7 +31,7 @@ const Footer = () => {
             <Image src={logo} w="40px" />
           </Flex>
           <Text pt={6} fontSize={"sm"} textAlign={"center"}>
-            © 2022 Ronald Brito from CidCode ❤. All rights reserved
+            © 2022 Ronald Brito ❤. All rights reserved
           </Text>
         </Box>
       </Box>

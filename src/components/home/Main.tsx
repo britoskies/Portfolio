@@ -90,7 +90,7 @@ const Main = ({ onOpen, overlay, setOverlay }: Props): JSX.Element => {
             data-aos="fade-left"
             data-aos-duration="2000"
           >
-            FRONTEND DEVELOPER JR.
+            FRONTEND DEVELOPER
           </Text>
           <Text
             w="100%"
@@ -101,11 +101,11 @@ const Main = ({ onOpen, overlay, setOverlay }: Props): JSX.Element => {
             data-aos="fade-left"
             data-aos-duration="2000"
           >
-            One year of experience as a self-employed Junior Software Developer.
-            Engaging on personal projects and seeking towards working in a
-            collaborative environment. <br /> <br />
+            One year of experience as a RPA Developer,
+            engaging on personal projects and seeking towards working in a
+            collaborative environment as a Frontend Developer. <br /> <br />
             Passionate about building simple but remarkable UI's, using
-            technologies like React, Angular, SCSS & Bootstrap.
+            technologies like React, TypeScript, NodeJS and more.
           </Text>
           <Flex my={5} gap={5}>
             {btnLoading && (

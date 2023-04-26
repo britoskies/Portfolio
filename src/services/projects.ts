@@ -13,7 +13,7 @@ const projects: any = [
     description:
       "Full-stack app for hospitals to have a digital platform where they can manage & store and read all data related to their hospital center.",
     type: "Fullstack Web App",
-    link: "https://hospital-manager.vercel.app",
+    link: "https://hospital-manager-tds.vercel.app",
     image: hms,
     appreciation: 5,
     techs: {

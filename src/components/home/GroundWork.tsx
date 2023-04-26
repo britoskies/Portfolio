@@ -22,6 +22,7 @@ import ExperienceItem from './ExperienceItem';
 import SelfLearningItem from './SelfLearning';
 import ProjectsItem from './ProjectsItem';
 import CurrentStateItem from './CurrentStateItem';
+import SecondExperienceItem from "./SecondExperienceItem";
 
 
 const GroundWork = () => {
@@ -52,6 +53,7 @@ const GroundWork = () => {
         <ExperienceItem />
         <SelfLearningItem />
         <ProjectsItem />
+        <SecondExperienceItem/>
         <CurrentStateItem/>
       </VerticalTimeline>
     </Flex>

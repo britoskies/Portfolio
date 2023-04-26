@@ -26,20 +26,19 @@ const CurrentStateItem = (): JSX.Element => {
       </h3>
       <h4 className="vertical-timeline-element-subtitle">Where I'm at now</h4>
       <p>
-        Currently learned the basics of Angular and Bootstrap by making a News
-        Application. Also I'm making a small Ecommerce with Angular & building a
-        full stack app with EJS and NodeJS with Express implementing paypal pay.
+        Currently learning how to write clean code. Also, seeking towards a job where
+        I can showcase my Frontend skills with React and other techs.
       </p>
 
       <List spacing={3}>
         <Text> What I'm Learning </Text>
         <ListItem>
           <ListIcon as={RepeatIcon} color="blue.200" />
-          Angular (advanced concepts)
+          SOLID
         </ListItem>
         <ListItem>
           <ListIcon as={RepeatIcon} color="blue.200" />
-          ASP.NET
+          Clean Code
         </ListItem>
       </List>
       <List spacing={3}>

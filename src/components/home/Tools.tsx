@@ -50,7 +50,7 @@ const Tools = () => {
                 <Image src={kanban} />
               </Circle>
               <Text color="gray.300" fontSize="sm" fontWeight="semibold">
-                Kanban
+                Scrum
               </Text>
             </Flex>
             <Flex gap={3}>
