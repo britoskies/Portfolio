@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../components/footer/Footer";
 
 // PDF
-import resume from "../../assets/pdf/RonaldBritoCV-EN-MAR2022.pdf";
+import resume from "../../assets/pdf/RonaldBrito-CV-2023.pdf"
 
 // Chakra
 import { Flex, Heading, Stack, useMediaQuery } from "@chakra-ui/react";
@@ -24,10 +24,11 @@ export default function Resume(): JSX.Element {
   const [isNotSmallScreen]: boolean[] = useMediaQuery("(min-width:600px)");
 
   return (
-    <Stack w="100%">
+    <Stack w="100%" h="100%">
       <Flex
         direction="column"
         w={responsive}
+        h={responsive}
         my={isNotSmallScreen ? 10 : 5}
         gap={5}
       >
