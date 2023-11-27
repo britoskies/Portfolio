@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Chakra
 import {
@@ -27,6 +27,9 @@ import { MdEmail, MdOutlineEmail } from "react-icons/md";
 // Emailjs
 import emailjs from "@emailjs/browser";
 
+// Utils
+import { checkObjectProperties } from "../../utils/functions";
+
 const confetti = {
   light: {
     primary: "4299E1", // blue.400
@@ -45,9 +48,28 @@ const ContactSection = () => {
   const { hasCopied, onCopy } = useClipboard("britoskies@gmail.com");
   const toast = useToast();
   const form: any = React.useRef();
+  const [mailInfo, setMailInfo] = useState({
+    from_name: "",
+    from_email: "",
+    message: "",
+  });
+
+  const onChange = (e: any) => {
+    setMailInfo({ ...mailInfo, [e.target.name]: e.target.value });
+  };
 
   const sendEmail = (e: any) => {
     e.preventDefault();
+    if (!checkObjectProperties(mailInfo)) {
+      return toast({
+        title: "Error",
+        description: "No puede dejar campos vacíos",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    }
+
     emailjs
       .sendForm(
         "service_hn3qcz7",
@@ -230,6 +252,8 @@ const ContactSection = () => {
                           type="text"
                           name="from_name"
                           placeholder="Your Name"
+                          value={mailInfo.from_name}
+                          onChange={onChange}
                         />
                       </InputGroup>
                     </FormControl>
@@ -243,6 +267,8 @@ const ContactSection = () => {
                           type="email"
                           name="from_email"
                           placeholder="Your Email"
+                          value={mailInfo.from_email}
+                          onChange={onChange}
                         />
                       </InputGroup>
                     </FormControl>
@@ -255,6 +281,8 @@ const ContactSection = () => {
                         placeholder="Your Message"
                         rows={6}
                         resize="none"
+                        value={mailInfo.message}
+                        onChange={onChange}
                       />
                     </FormControl>
 
