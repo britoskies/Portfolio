@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../components/footer/Footer";
 
 // PDF
-import resume from "../../assets/pdf/RonaldBrito-CV-2023.pdf"
+import resume from "../../assets/pdf/RonaldBrito-JRCV.pdf"
 
 // Chakra
 import { Flex, Heading, Stack, useMediaQuery } from "@chakra-ui/react";
