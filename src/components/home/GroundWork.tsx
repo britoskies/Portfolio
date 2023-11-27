@@ -1,32 +1,29 @@
 import React from "react";
 
 // Chakra
-import { CheckCircleIcon, CopyIcon } from "@chakra-ui/icons";
-import {
-  Flex,
-  Heading,
-  List,
-  ListIcon,
-  ListItem,
-  Text,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Flex, Heading, Text, useMediaQuery } from "@chakra-ui/react";
 
 // Vertical Timeline
 import "react-vertical-timeline-component/style.min.css";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 
-// Components
-import CoursesItem from './CoursesItem';
-import ExperienceItem from './ExperienceItem';
-import SelfLearningItem from './SelfLearning';
-import ProjectsItem from './ProjectsItem';
-import CurrentStateItem from './CurrentStateItem';
-import SecondExperienceItem from "./SecondExperienceItem";
+// Services
+import experiences from "../../services/experiences";
 
+// Components
+import CoursesItem from "./CoursesItem";
+import ExperienceItem from "./ExperienceItem";
+import SelfLearningItem from "./SelfLearning";
+import ProjectsItem from "./ProjectsItem";
+import CurrentStateItem from "./CurrentStateItem";
 
 const GroundWork = () => {
   const [isNotSmallScreen]: boolean[] = useMediaQuery("(min-width:400px)");
+
+  const getExperience = (exp: number) => {
+    return experiences.filter((e) => exp === e.id)[0];
+  };
+
   return (
     <Flex direction="column" w="100%" justify="center" align="center" gap={3}>
       <Text
@@ -49,12 +46,24 @@ const GroundWork = () => {
         GroundWork
       </Heading>
       <VerticalTimeline>
-        <CoursesItem/>
-        <ExperienceItem />
+        <CoursesItem />
+        <ExperienceItem
+          company={getExperience(1).company}
+          timeline={getExperience(1).timeline}
+          description={getExperience(1).description}
+        />
         <SelfLearningItem />
         <ProjectsItem />
-        <SecondExperienceItem/>
-        <CurrentStateItem/>
+        <ExperienceItem
+          company={getExperience(2).company}
+          timeline={getExperience(2).timeline}
+          description={getExperience(2).description}
+        />
+        <ExperienceItem
+          company={getExperience(3).company}
+          timeline={getExperience(3).timeline}
+          description={getExperience(3).description}
+        />
       </VerticalTimeline>
     </Flex>
   );

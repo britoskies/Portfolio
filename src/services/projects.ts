@@ -4,9 +4,10 @@ import newsapp from "../assets/img/newsapp.png"
 import todolist from "../assets/img/todolist2.png"
 import imc from "../assets/img/imc.png"
 import loginapi from "../assets/img/api.jpg";
+import { iProjects } from "../interfaces/projects";
 
 
-const projects: any = [
+const projects: iProjects[] = [
   {
     id: 1,
     name: "Hospital Management System",

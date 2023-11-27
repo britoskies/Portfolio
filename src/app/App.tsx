@@ -7,14 +7,10 @@ import NavBar from "./../components/navbar/NavBar";
 
 // Chakra
 import {
-  Box,
-  Button,
   Center,
   ChakraProvider,
   FormControl,
   FormLabel,
-  SlideFade,
-  Stack,
   Switch,
   useDisclosure,
   VStack,
@@ -30,7 +26,7 @@ import "aos/dist/aos.css";
 
 // Sound
 import Sound, { ReactSoundProps } from "react-sound";
-import song from "../assets/sound/Bad-Bunny-Yo-No-Soy-Celoso.mp3";
+import song from "../assets/sound/Jack-Harlow-Denver-Instrumental.mp3";
 
 function App() {
   const [loading, setLoading] = React.useState<boolean>(true);
@@ -79,18 +75,15 @@ function App() {
           <Switch
             id="email-alerts"
             colorScheme="red"
-            //isChecked
             onChange={() => togglePlayStatus()}
           />
         </FormControl>
         {loading ? (
           <CustomSpinner />
         ) : (
-          
-            <Center>
-              <Router />
-            </Center>
-          
+          <Center>
+            <Router />
+          </Center>
         )}
       </VStack>
     </ChakraProvider>

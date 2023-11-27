@@ -6,7 +6,17 @@ import { PhoneIcon } from "@chakra-ui/icons";
 import "react-vertical-timeline-component/style.min.css";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
-const ExperienceItem = (): JSX.Element => {
+type Props = {
+  company: string;
+  timeline: string;
+  description: string;
+};
+
+const ExperienceItem = ({
+  company,
+  timeline,
+  description,
+}: Props): JSX.Element => {
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -16,7 +26,7 @@ const ExperienceItem = (): JSX.Element => {
         borderBottom: "solid 5px #f56565",
       }}
       contentArrowStyle={{ borderRight: "12px solid #2b2b2b" }}
-      date="Mar 2021 - Aug 2021"
+      date={timeline}
       iconStyle={{ background: "#f56565", color: "#fff" }}
       icon={<PhoneIcon />}
     >
@@ -24,12 +34,8 @@ const ExperienceItem = (): JSX.Element => {
         <b>Work Experience</b>
       </h3>
       <br />
-      <h4 className="vertical-timeline-element-subtitle">Teleperformance</h4>
-      <p>
-        Worked as a Customer Service Representative in english format. My role
-        was to answer inbound phone calls, addressing customers questions about
-        products and services, and generate sales lead.
-      </p>
+      <h4 className="vertical-timeline-element-subtitle">{company}</h4>
+      <p>{description}</p>
     </VerticalTimelineElement>
   );
 };

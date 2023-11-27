@@ -30,7 +30,6 @@ const Main = ({ onOpen, overlay, setOverlay }: Props): JSX.Element => {
   const navigateTo = useNavigate();
   const [btnLoading, setLoading] = React.useState<boolean>(false);
   const [isNotSmallScreen]: boolean[] = useMediaQuery("(min-width:600px)");
-
   const responsive: string[] = ["100%", "90%", "80%", "70%"];
 
   const goToResume = () => {
@@ -101,11 +100,10 @@ const Main = ({ onOpen, overlay, setOverlay }: Props): JSX.Element => {
             data-aos="fade-left"
             data-aos-duration="2000"
           >
-            One year of experience as a RPA Developer,
-            engaging on personal projects and seeking towards working in a
-            collaborative environment as a Frontend Developer. <br /> <br />
-            Passionate about building simple but remarkable UI's, using
-            technologies like React, TypeScript, NodeJS and more.
+            With one year of experience in RPA and Front-End development, my
+            passion lies in creating innovative solutions at the intersection of
+            technology and user experience. My dominating tech is ReactJS, and I
+            thrive on crafting seamless, user-friendly interfaces.
           </Text>
           <Flex my={5} gap={5}>
             {btnLoading && (
