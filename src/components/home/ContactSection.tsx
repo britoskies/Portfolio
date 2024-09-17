@@ -47,6 +47,7 @@ const CONFETTI_DARK = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2
 const ContactSection = () => {
   const { hasCopied, onCopy } = useClipboard("britoskies@gmail.com");
   const toast = useToast();
+  const icon = useColorModeValue(CONFETTI_DARK, CONFETTI_DARK);
   const form: any = React.useRef();
   const [mailInfo, setMailInfo] = useState({
     from_name: "",
@@ -63,7 +64,7 @@ const ContactSection = () => {
     if (!checkObjectProperties(mailInfo)) {
       return toast({
         title: "Error",
-        description: "No puede dejar campos vacíos",
+        description: "Can't leave empty fields!",
         status: "error",
         duration: 9000,
         isClosable: true,
@@ -119,7 +120,7 @@ const ContactSection = () => {
       align="center"
       justify="center"
       css={{
-        backgroundImage: useColorModeValue(CONFETTI_DARK, CONFETTI_DARK),
+        backgroundImage: icon,
         backgroundAttachment: "scroll",
       }}
       id="contact"

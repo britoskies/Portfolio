@@ -29,7 +29,7 @@ type Props = {
 const Main = ({ onOpen, overlay, setOverlay }: Props): JSX.Element => {
   const navigateTo = useNavigate();
   const [btnLoading, setLoading] = React.useState<boolean>(false);
-  const [isNotSmallScreen]: boolean[] = useMediaQuery("(min-width:600px)");
+  const [isNotSmallScreen] = useMediaQuery("(min-width:600px)");
   const responsive: string[] = ["100%", "90%", "80%", "70%"];
 
   const goToResume = () => {
@@ -89,7 +89,7 @@ const Main = ({ onOpen, overlay, setOverlay }: Props): JSX.Element => {
             data-aos="fade-left"
             data-aos-duration="2000"
           >
-            FRONTEND DEVELOPER
+            SOFTWARE DEVELOPER
           </Text>
           <Text
             w="100%"
@@ -100,10 +100,14 @@ const Main = ({ onOpen, overlay, setOverlay }: Props): JSX.Element => {
             data-aos="fade-left"
             data-aos-duration="2000"
           >
-            With one year of experience in RPA and Front-End development, my
-            passion lies in creating innovative solutions at the intersection of
-            technology and user experience. My dominating tech is ReactJS, and I
-            thrive on crafting seamless, user-friendly interfaces.
+            Experienced graduate developer with a strong academic background and
+            over 2 years of hands-on experience in Web Development and Robotic
+            Process Automation (RPA). Skilled in building, designing, and
+            implementing innovative solutions to meet project requirements.
+            Proven ability to collaborate effectively with team members to
+            achieve project goals. Currently seeking opportunities to leverage
+            expertise in software development to contribute to challenging
+            projects and further professional growth.
           </Text>
           <Flex my={5} gap={5}>
             {btnLoading && (

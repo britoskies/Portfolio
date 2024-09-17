@@ -30,8 +30,7 @@ const ProjectsItem = (): JSX.Element => {
         with NodeJS and ExpressJS using JWT. <br /> <br />
         
         On January 2021 created a Hospital Management System which is a full
-        stack app made with React, Material UI & Firebase along side Victor
-        Velazquez.
+        stack app made with React, Material UI & Firebase.
       </p>
     </VerticalTimelineElement>
   );
